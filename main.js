@@ -4,12 +4,12 @@ const image = document.getElementById('image');
 const domContainer = document.querySelector('#Timer');
 const root = ReactDOM.createRoot(domContainer);
 button.addEventListener('click', () => {
-  fetch('http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true') 
+  fetch('https://dog.ceo/api/breeds/image/random') 
   .then(response => {
       return response.json();
   })
   .then(myJson => {
-      image.src = myJson;
+      image.src = myJson["message"];
   });
 });
 
