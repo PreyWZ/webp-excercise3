@@ -4,12 +4,10 @@ const image = document.getElementById('image');
 const domContainer = document.querySelector('#Timer');
 const root = ReactDOM.createRoot(domContainer);
 button.addEventListener('click', () => {
-  fetch('https://dog.ceo/api/breeds/image/random') 
-  .then(response => {
+  fetch(' https://randomfox.ca/floof/  ') .then(function(response){
       return response.json();
-  })
-  .then(myJson => {
-      image.src = myJson["message"];
+  }).then(function(json){
+      image.src = json["image"];
   });
 });
 
